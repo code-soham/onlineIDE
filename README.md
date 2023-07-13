@@ -8,6 +8,7 @@ Before starting, ensure that you have the following installed on your system:
 
 - Node.js (v12 or above)
 - npm (Node Package Manager)
+- Advised, to run the project in local for testing as the free cloud hosting service may be buggy
 
 ## Getting Started
 
