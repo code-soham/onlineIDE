@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "75dae1f6-c764-4c9a-bc45-0c8f3a3ae8cb",
+		"name": "onlineIDE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15752971"
+	},
+	"item": [
+		{
+			"name": "question",
+			"item": [
+				{
+					"name": "getAllQuestions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/ps/"
+					},
+					"response": []
+				},
+				{
+					"name": "createQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"statement\" : \"Print Hello World\",\n    \"inputParams\" : \"No Input\",\n    \"outputParams\" : \"Output should be `Hello World` in a line.\",\n    \"difficulty\" : \"easy\",\n    \"category\" : \"basics\"       \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/ps/"
+					},
+					"response": []
+				},
+				{
+					"name": "getQuestionById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5"
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuestion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"statement\" : \"Print Ok Google\",\n    \"inputParams\" : \"No Input\",\n    \"outputParams\" : \"Output should be `Ok Google` in a line.\",\n    \"difficulty\" : \"easy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuestion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/ps/64af8e3eeaa6222084fc91ee/"
+					},
+					"response": []
+				},
+				{
+					"name": "addTC",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"input\" : \"\",\n    \"output\" : \"Hello World\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5/"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTC",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"input\" : \"\",\n    \"output\" :\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5/64af90882567f56ea2d40abc"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTC",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5/64af953b0bc4108285d75cbc"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // \"username\" : \"code-user\",\n    \"username\" : \"code-soham\",\n    \"password\" : \"123456\",\n    // \"email\" : \"sc2413@it.jgec.ac.in\",\n    \"email\" : \"sc2412@it.jgec.ac.in\",\n    \"role\" : \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"code-user\",\n    \"password\" : \"123456\",\n    \"email\" : \"sc2413@it.jgec.ac.in\",\n    \"role\" : \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/singup"
+					},
+					"response": []
+				},
+				{
+					"name": "authVal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/auth/{{middleware}}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sphere engine",
+			"item": [
+				{
+					"name": "submit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "compilerId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "source",
+									"type": "file",
+									"src": "/home/soham/Desktop/SUBLIME/code.cpp"
+								},
+								{
+									"key": "input",
+									"value": "Hello World",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "input",
+									"value": "Hello World",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "localhost:8000/api/sphere/64af903e2567f56ea2d40ab5"
+					},
+					"response": []
+				},
+				{
+					"name": "get verdict",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" :578718088\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/sphere/578718088"
+					},
+					"response": []
+				},
+				{
+					"name": "submission sphere",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "compilerId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "output",
+									"value": "Hello world",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "source",
+									"type": "file",
+									"src": "/home/soham/Desktop/SUBLIME/code.cpp"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://e609ab39.compilers.sphere-engine.com/api/v4/submissions?access_token=bee01c96a93348daa854127e92eaada5",
+							"protocol": "https",
+							"host": [
+								"e609ab39",
+								"compilers",
+								"sphere-engine",
+								"com"
+							],
+							"path": [
+								"api",
+								"v4",
+								"submissions"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "bee01c96a93348daa854127e92eaada5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "middleware",
+			"value": "authValidate"
+		}
+	]
+}
