@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "75dae1f6-c764-4c9a-bc45-0c8f3a3ae8cb",
 		"name": "onlineIDE",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15752971"
 	},
 	"item": [
@@ -11,10 +11,30 @@
 			"item": [
 				{
 					"name": "getAllQuestions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/api/ps/"
+						"url": {
+							"raw": "{{baseUrl}}/ps/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -32,7 +52,16 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/ps/"
+						"url": {
+							"raw": "{{baseUrl}}/ps/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -41,7 +70,16 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5"
+						"url": {
+							"raw": "{{baseUrl}}/ps/64af903e2567f56ea2d40ab5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								"64af903e2567f56ea2d40ab5"
+							]
+						}
 					},
 					"response": []
 				},
@@ -59,7 +97,16 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5"
+						"url": {
+							"raw": "{{baseUrl}}/ps/64af903e2567f56ea2d40ab5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								"64af903e2567f56ea2d40ab5"
+							]
+						}
 					},
 					"response": []
 				},
@@ -68,7 +115,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "localhost:8000/api/ps/64af8e3eeaa6222084fc91ee/"
+						"url": {
+							"raw": "{{baseUrl}}/ps/64af8e3eeaa6222084fc91ee/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								"64af8e3eeaa6222084fc91ee",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -86,7 +143,17 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5/"
+						"url": {
+							"raw": "{{baseUrl}}/ps/64af903e2567f56ea2d40ab5/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								"64af903e2567f56ea2d40ab5",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -104,7 +171,17 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5/64af90882567f56ea2d40abc"
+						"url": {
+							"raw": "{{baseUrl}}/ps/64af903e2567f56ea2d40ab5/64af90882567f56ea2d40abc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								"64af903e2567f56ea2d40ab5",
+								"64af90882567f56ea2d40abc"
+							]
+						}
 					},
 					"response": []
 				},
@@ -113,7 +190,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "localhost:8000/api/ps/64af903e2567f56ea2d40ab5/64af953b0bc4108285d75cbc"
+						"url": {
+							"raw": "{{baseUrl}}/ps/64af903e2567f56ea2d40ab5/64af953b0bc4108285d75cbc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ps",
+								"64af903e2567f56ea2d40ab5",
+								"64af953b0bc4108285d75cbc"
+							]
+						}
 					},
 					"response": []
 				}
@@ -124,8 +211,11 @@
 			"item": [
 				{
 					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -136,7 +226,16 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/auth/login"
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
 					},
 					"response": []
 				},
@@ -154,7 +253,16 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/auth/singup"
+						"url": {
+							"raw": "{{baseUrl}}/auth/singup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"singup"
+							]
+						}
 					},
 					"response": []
 				},
@@ -163,7 +271,16 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/api/auth/{{middleware}}"
+						"url": {
+							"raw": "{{baseUrl}}/auth/{{middleware}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"{{middleware}}"
+							]
+						}
 					},
 					"response": []
 				}
@@ -204,28 +321,34 @@
 								}
 							]
 						},
-						"url": "localhost:8000/api/sphere/64af903e2567f56ea2d40ab5"
+						"url": {
+							"raw": "{{baseUrl}}/sphere/64af903e2567f56ea2d40ab5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sphere",
+								"64af903e2567f56ea2d40ab5"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "get verdict",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"id\" :578718088\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "localhost:8000/api/sphere/578718088"
+						"url": {
+							"raw": "{{baseUrl}}/sphere/578718088",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sphere",
+								"578718088"
+							]
+						}
 					},
 					"response": []
 				},
@@ -280,12 +403,51 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "basic GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
 		{
 			"key": "middleware",
 			"value": "authValidate"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://tame-tan-sheep-gear.cyclic.app/api",
+			"type": "string"
 		}
 	]
 }

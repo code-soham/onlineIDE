@@ -51,14 +51,12 @@ UserSchema.statics.login = async function (email, password) {
   const user = await this.findOne({ email });
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
-    // const pw = await bcrypt(user.password);
-    // console.log(auth);
     if (auth) {
       return user;
     }
     throw Error("incorrect password");
   }
-  throw Error("incorrect email");
+  throw Error("User not found");
 };
 
 export default mongoose.model("User", UserSchema);

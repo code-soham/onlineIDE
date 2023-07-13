@@ -32,24 +32,24 @@ const signup = async (req, res) => {
 };
 const login = async (req, res) => {
   const { email, password } = req.body;
-  res.send("login");
-  // try {
-  //   const user = await User.login(email, password);
-  //   const token = createToken(user._id);
-  //   res.cookie("authToken", token, { httpOnly: true, maxAge: maxAge * 1000 });
-  //   res.status(200).json({
-  //     user: { email: user.email },
-  //     resCode: 200,
-  //   });
-  // } catch (err) {
-  //   console.log("error",err)
-  //   res.status(200).json({
-  //     error: err,
-  //     resCode: 400,
-  //     resMessage: "Invalid Credentials",
-  //     resType: "danger",
-  //   });
-  // }
+
+  try {
+    const user = await User.login(email, password);
+    const token = createToken(user._id);
+    res.cookie("authToken", token, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.status(200).json({
+      user: { email: user.email },
+      resCode: 200,
+    });
+  } catch (err) {
+    console.log("error", err);
+    res.status(200).json({
+      error: err,
+      resCode: 400,
+      resMessage: "Invalid Credentials",
+      resType: "danger",
+    });
+  }
 };
 const logout = (req, res) => {
   res.cookie("authToken", "", { maxAge: 1 });

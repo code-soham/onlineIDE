@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 
 const authValidate = async (req, res, next) => {
   const token = req.cookies.authToken;
+  // console.log(" middleware : authValidate")
   if (token) {
     jwt.verify(token, process.env.SECRET, async (err, decodedToken) => {
       if (err) {
@@ -23,6 +24,7 @@ const authValidate = async (req, res, next) => {
 };
 
 const isAdmin = (req, res, next) => {
+  // console.log("middleware : isAdmin");
   const token = req.cookies.authToken;
   if (token) {
     jwt.verify(token, db.secret, async (err, decodedToken) => {

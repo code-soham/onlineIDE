@@ -40,7 +40,7 @@ mongoose
 import authRoutes from "./routes/auth.route.js";
 import questionRoutes from "./routes/question.route.js";
 import sphereRoutes from "./routes/sphere.route.js";
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Hello Cometeers!");
 });
 app.use("/api/auth", authRoutes);
